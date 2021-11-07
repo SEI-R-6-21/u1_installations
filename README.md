@@ -5,7 +5,7 @@
 
 ## Overview
 
-We'll be installing most of the necessary tools for software engineering in this lesson. These tools are what we'll be utilizing during Unit 1. 
+We'll be installing all of the tools necessary for Unit 1 in this lesson.
 
 ***It is so important that you follow all of these instructions to a T, without skipping ahead.  It is also very important, when working in the terminal, to ensure that you type everything exactly correctly before running the command. You are interacting with your computer's inner configurations, and each command should be treated with care and intention.***
 
@@ -13,29 +13,29 @@ We'll be installing most of the necessary tools for software engineering in this
 
 We'll be using Slack to register attendance and communicate during class. Follow the instructions below to sign up for Slack.
 
-- Visit the following [site](https://slack.com/downloads) to download the application.
-- Sign up using your email and join your class Slack channel.
-- Upload a profile picture to Slack.
-- Your name should be your **full name** and contain the closest major city's intitials: `John Doe - NY`
+- Visit the following [site](https://slack.com/downloads) to download the desktop application.
+- You should definitely ***not*** be using the browser version of Slack.
+- Upload a ***clear*** and ***professional*** profile picture to Slack.
+- Your Slack name should be your ***full name*** and not a username or nickname. This helps your instructors and classmates get to know you and interact with you.
 
 ---
 
 ## Browsers
 
-In order to become efficient javascript developers, we'll utilize one of 4 recommended browsers:
+In order to become efficient JavaScript developers, we'll utilize any one of 4 recommended browsers:
 
 - [Chrome](https://www.google.com/chrome/)
-- [Edge](https://www.microsoft.com/en-us/edge?r=1)
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Brave](https://brave.com/)
+- [Edge](https://www.microsoft.com/en-us/edge?r=1)
 
 **Safari is not included on this list due to specific features that are not cross compatible with other browsers.**
 
-## Mac OS
+## MacOS Users...
 
 ### Installing Homebrew
 
-Homebrew is a package manager for Mac OS. It makes installing programs fast and easy.
+Homebrew is a package manager for MacOS. It makes installing other programs fast and easy.
 
 To install Homebrew, paste the following command into your terminal and hit the <kbd>return</kbd> key:
 
@@ -43,7 +43,7 @@ To install Homebrew, paste the following command into your terminal and hit the 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-The above command will perform the installation for you.
+This command will perform the installation for you.
 
 ---
 
@@ -65,11 +65,9 @@ What is Oh-My-Zsh?
 
 > Oh My Zsh is an open source, community-driven framework for managing your Zsh configuration. It comes with a bunch of features out of the box and improves your terminal experience.
 
-It also provides us with preset themes to make reading your terminal _much_ easier.
+It also provides us with preset themes to make reading our terminal _much_ easier.
 
-#### To Install Oh-My-Zsh:
-
-Execute the following commands in your terminal:
+To install Oh-My-Zsh, execute the following commands in your terminal:
 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -107,7 +105,7 @@ To install Git, execute the following command in your terminal:
 brew install git
 ```
 
-Once the installation completes, execute the following commands in your terminal, **_one by one_**, with your information inserted:
+Once the installation completes, execute the following commands in your terminal, **_one by one_**, with your ***own*** information inserted:
 
 ```sh
 git config --global user.name "Your Actual Name Here"
@@ -117,42 +115,42 @@ git config --global user.name "Your Actual Name Here"
 git config --global user.email "your_email@example.com"
 ```
 
-The name and email should be the name and email you use on GitHub.
+The name and email should be ***your*** name and email that you use on GitHub.
 
 #### Setting Up GitHub Authentication
 
 In order for GitHub to deem our machines as "safe" to push code, we need to setup an identification key known as an `ssh key`.
 
-Enter the following commands in your terminal, with your information inserted:
+Enter the following commands in your terminal, with your ***own*** information inserted:
 
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-The above email should be your GitHub email!
+The above email ***must*** be your GitHub email!
 
 You should see the following prompt:
 
 ```sh
-> Enter a file in which to save the key (/Users/you/.ssh/id_ed25519): [Press enter]
+> Enter a file in which to save the key (/Users/you/.ssh/id_ed25519):
 ```
 
-Hit <kbd>return</kbd> to save it in a default file.
+Leave it blank and hit <kbd>return</kbd> to save it in a default file.
 
 You'll now be prompted to password protect the ssh key, but we can skip this portion. When prompted with the following, **hit** <kbd>return</kbd> **to leave the password as blank, both times**:
 
 ```sh
-> Enter passphrase (empty for no passphrase): [Type a passphrase]
-> Enter same passphrase again: [Type passphrase again]
+> Enter passphrase (empty for no passphrase):
+> Enter same passphrase again:
 ```
 
-Let's start the Mac OS ssh-agent. Enter the following command into your terminal:
+Now, let's start the MacOS ssh-agent. Enter the following command into your terminal:
 
 ```sh
 eval "$(ssh-agent -s)"
 ```
 
-Now copy the ssh key to your clipboard:
+Now copy the ssh key to your clipboard with this command:
 
 ```sh
 pbcopy < ~/.ssh/id_rsa.pub
@@ -160,7 +158,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 
 To complete this setup, follow the instructions starting from Step 2 at this link **[HERE](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)**.
 
-To check your installation run:
+To check your installation, run:
 
 ```bash
 ssh git@github.com
@@ -189,9 +187,11 @@ Verify your installation by running:
 code .
 ```
 
-This should open a new VSCode window.
+This command should open a new VSCode window.
 
-If the above does not work, open VSCode manually from your Applications folder.
+#### If the `code .` command does not work for you...
+
+Open VSCode manually from your Applications folder.
 
 Once a VSCode window opens, press and hold <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>P</kbd> to open the _command palette_. In the command palette, type in `path` and choose the option:
 
